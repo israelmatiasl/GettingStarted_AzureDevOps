@@ -28,9 +28,9 @@ steps:
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
-    testAssemblyVer2: '|
-     **\*Tests.dll
-     !**\obj\**'
+    testAssemblyVer2: |
+     **\*Test.dll
+     !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
