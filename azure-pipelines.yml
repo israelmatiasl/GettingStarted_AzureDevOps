@@ -34,4 +34,3 @@ steps:
       !**\*GettingStarted.Test.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    vsTestVersion: '16.0'
