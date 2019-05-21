@@ -25,6 +25,13 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release'
 
+
 - task: VSTest@2
+  displayName: VSTest - Assemblies
   inputs:
     testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\*test*.dll
+      !**\*GettingStarted.Test.dll
+      !**\obj\**'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    vsTestVersion: '16.0'
