@@ -25,12 +25,12 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release'
 
-
 - task: VSTest@2
-  displayName: VSTest - Assemblies
   inputs:
     testSelector: 'testAssemblies'
-    testAssemblyVer2: '**\*test*.dll
-      !**\*GettingStarted.Test.dll
+    testAssemblyVer2: '**\GettingStarted.Test\**\*Test*.dll
       !**\obj\**'
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    diagnosticsEnabled: true
